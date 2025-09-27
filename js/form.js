@@ -17,8 +17,10 @@ form.addEventListener('submit', function(e) {
         })
         .then(async (response) => {
             let json = await response.json();
-            if (response.status == 200) {   
+            if (response.status == 200) {
+                showToastNotification('success', 'Form Submitted Successfully!', 'Thank you for your inquiry. We\'ll get back to you within 24 hours.');
             } else {
+                showToastNotification('error', 'Submission Failed', 'There was an error submitting your form. Please try again.');
                 console.log(response);
             }
         })
@@ -322,7 +324,57 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Add CSS for form validation styles
+// Toast Notification Function
+function showToastNotification(type, title, message) {
+    // Create toast container if it doesn't exist
+    let toastContainer = document.getElementById('toast-container');
+    if (!toastContainer) {
+        toastContainer = document.createElement('div');
+        toastContainer.id = 'toast-container';
+        toastContainer.className = 'toast-container';
+        document.body.appendChild(toastContainer);
+    }
+    
+    // Create toast element
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+    
+    // Toast content
+    toast.innerHTML = `
+        <div class="toast-content">
+            <div class="toast-icon">
+                ${type === 'success' ? '✓' : '✕'}
+            </div>
+            <div class="toast-text">
+                <div class="toast-title">${title}</div>
+                <div class="toast-message">${message}</div>
+            </div>
+            <button class="toast-close" onclick="this.parentElement.remove()">×</button>
+        </div>
+    `;
+    
+    // Add toast to container
+    toastContainer.appendChild(toast);
+    
+    // Animate in
+    setTimeout(() => {
+        toast.classList.add('toast-show');
+    }, 100);
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        if (toast.parentNode) {
+            toast.classList.remove('toast-show');
+            setTimeout(() => {
+                if (toast.parentNode) {
+                    toast.remove();
+                }
+            }, 300);
+        }
+    }, 5000);
+}
+
+// Add CSS for form validation styles and toast notifications
 const formStyle = document.createElement('style');
 formStyle.textContent = `
     .form-group input.error,
@@ -343,6 +395,124 @@ formStyle.textContent = `
     .form-group textarea:focus.error {
         border-color: #e74c3c;
         box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+    }
+    
+    /* Toast Notification Styles */
+    .toast-container {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 10000;
+        pointer-events: none;
+    }
+    
+    .toast {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        margin-bottom: 10px;
+        max-width: 400px;
+        min-width: 300px;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.3s ease;
+        pointer-events: auto;
+        border-left: 4px solid;
+    }
+    
+    .toast-success {
+        border-left-color: #27ae60;
+    }
+    
+    .toast-error {
+        border-left-color: #e74c3c;
+    }
+    
+    .toast-show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .toast-content {
+        display: flex;
+        align-items: flex-start;
+        padding: 16px;
+        gap: 12px;
+    }
+    
+    .toast-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        flex-shrink: 0;
+    }
+    
+    .toast-success .toast-icon {
+        background-color: #27ae60;
+    }
+    
+    .toast-error .toast-icon {
+        background-color: #e74c3c;
+    }
+    
+    .toast-text {
+        flex: 1;
+    }
+    
+    .toast-title {
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 4px;
+        font-size: 14px;
+    }
+    
+    .toast-message {
+        color: #666;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    .toast-close {
+        background: none;
+        border: none;
+        color: #999;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 1;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+        flex-shrink: 0;
+    }
+    
+    .toast-close:hover {
+        background-color: #f0f0f0;
+        color: #333;
+    }
+    
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+        .toast-container {
+            left: 20px;
+            right: 20px;
+            top: 20px;
+        }
+        
+        .toast {
+            min-width: auto;
+            max-width: none;
+        }
     }
 `;
 document.head.appendChild(formStyle);
