@@ -341,13 +341,24 @@
                         </div>
                     </div>
                 </div>
-                <form action="https://formbold.com/s/3Gzyx" method="POST">
-                    <input type="email" placeholder="Email" name="email">
-                    <input type="number" placeholder="Phone number" name="Phonenumber">
-                    <textarea name="message" placeholder="Type your message"></textarea>
+                <form action="https://api.web3forms.com/submit" method="POST">
 
-                    <!-- your other form fields go here -->
-                    <button type="submit">Send Message</button>
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="75b898e0-6415-45f9-a25f-631c2e1036ab">
+
+                    <!-- Form Inputs. Each input must have a name="" attribute -->
+                    <input type="text" name="name" required>
+                    <input type="email" name="email" required>
+                    <textarea name="message" required></textarea>
+
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <!-- Custom Confirmation / Success Page -->
+                    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+                    <button type="submit">Submit Form</button>
+
                 </form>
             </div>
         </div>
