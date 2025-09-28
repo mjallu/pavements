@@ -1,427 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavements Management Systems - Advanced Pavement Solutions & Consulting</title>
-    <meta name="description" content="ISO certified pavement engineering consultancy. Specialized in pavement design, testing, rehabilitation, and quality assurance for highways, airports, and commercial projects.">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pavement Management — Template</title>
+  <meta name="description" content="Template site for a pavement management & testing consultancy. Replace text, images and links as needed." />
+  <style>
+    :root{--accent:#1f6feb;--dark:#0f1724;--muted:#6b7280;--card:#ffffff;--glass:rgba(255,255,255,0.06)}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#f7fafc;color:#0b1220;line-height:1.5}
+    header{background:linear-gradient(90deg,var(--accent),#0ea5a3);color:#fff;padding:18px 24px}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{font-weight:700;font-size:20px}
+    .nav-links{display:flex;gap:14px}
+    .nav-links a{color:rgba(255,255,255,0.95);text-decoration:none;padding:6px 10px;border-radius:6px}
+    .cta{background:#fff;color:var(--accent);padding:8px 12px;border-radius:8px;font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;padding:56px 0}
+    .hero h1{font-size:34px;margin:0;color:#fff}
+    .hero p{color:rgba(255,255,255,0.9);margin:8px 0 0}
+
+    .grid{display:grid;gap:18px}
+    .cards{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(10,15,30,0.06)}
+    .card h3{margin:8px 0 6px}
+    .muted{color:var(--muted);font-size:0.95rem}
+
+    .equipment-list{display:flex;flex-wrap:wrap;gap:12px}
+    .equip{background:var(--glass);padding:10px;border-radius:8px;color:#fff}
+
+    .team{display:flex;flex-wrap:wrap;gap:12px}
+    .member{background:#fff;padding:12px;border-radius:10px;min-width:180px}
+
+    footer{background:#0b1220;color:#cbd5e1;padding:28px}
+    .footer-cols{display:flex;flex-wrap:wrap;gap:18px}
+
+    @media(min-width:880px){.hero{grid-template-columns:1fr 420px}}
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <h1>Pavements Management Systems</h1>
-                    <span class="logo-subtitle">ISO 9001:2015 Certified</span>
-                </div>
-                <div class="nav-menu" id="nav-menu">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#laboratory" class="nav-link">Laboratory</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#certifications" class="nav-link">Certifications</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </div>
-                <div class="nav-toggle" id="nav-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">YourPavementCo</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#equipment">Equipment</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
+          <a class="cta" href="#quote">Get a quote</a>
+        </div>
+      </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Advanced Pavement Engineering & Consulting</h1>
-            <p class="hero-subtitle">ISO 9001:2015 certified multi-disciplinary engineering consultancy specializing in pavement design, testing, and rehabilitation solutions</p>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Projects Completed</span>
-                </div>
-                <div class="hero-stat">
-                    <span class="stat-number">25</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="hero-stat">
-                    <span class="stat-number">15000+</span>
-                    <span class="stat-label">KM Roads Tested</span>
-                </div>
-            </div>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Request Consultation</a>
-                <a href="#services" class="btn btn-secondary">Our Expertise</a>
-            </div>
+      <section class="hero">
+        <div>
+          <h1>High‑quality pavement testing, design and asset management</h1>
+          <p>We provide pavement evaluation, laboratory and field testing, design, and asset management systems for roads, airports and ports. Use this template as a starting point to publish your company site to GitHub Pages.</p>
+          <p style="margin-top:14px"><a href="#services" class="cta">View services</a></p>
         </div>
-        <div class="hero-image">
-            <div class="placeholder-image">
-                <p>Pavement Testing Equipment & Field Operations</p>
-            </div>
+        <div class="card" style="align-self:center">
+          <h3>Quick contact</h3>
+          <p class="muted">Request a quote or ask a question — replace with your real contact form or integration (Netlify/Forms, Formspree, or server endpoint).</p>
+          <form id="contactForm" onsubmit="submitForm(event)">
+            <label style="display:block;margin-top:8px">Name<input required name="name" placeholder="Your name" style="width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #e5e7eb"/></label>
+            <label style="display:block;margin-top:8px">Email<input required name="email" type="email" placeholder="you@example.com" style="width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #e5e7eb"/></label>
+            <label style="display:block;margin-top:8px">Message<textarea required name="message" rows="3" placeholder="Tell us about your project" style="width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #e5e7eb"></textarea></label>
+            <button style="margin-top:10px;padding:10px 14px;border-radius:8px;border:none;background:var(--accent);color:#fff;font-weight:600">Send</button>
+          </form>
         </div>
+      </section>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:28px">
+    <section id="about" class="grid card">
+      <h2>About Us</h2>
+      <p class="muted">Shortly describe your company's mission, vision and capabilities. Example: we specialise in pavement testing, evaluation, design and asset management backed by advanced equipment and experienced engineers.</p>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Engineering Services</h2>
-                <p>Comprehensive pavement engineering solutions from design to rehabilitation</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🛣️</div>
-                    <h3>Pavement Design & Engineering</h3>
-                    <p>Advanced pavement design using mechanistic-empirical methods, FWD testing, and structural analysis for highways and airports.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">�</div>
-                    <h3>Pavement Investigation Studies</h3>
-                    <p>Network Survey Vehicle (NSV), Ground Penetrating Radar (GPR), core testing, and deflection measurements for pavement assessment.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>Traffic Surveys & Analysis</h3>
-                    <p>Automatic Traffic Counter & Classifier (ATCC), axle load surveys, origin-destination studies, and traffic impact assessments.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏗️</div>
-                    <h3>Geotechnical Investigation</h3>
-                    <p>Soil investigation, bore hole drilling, plate load tests, pile load tests, and foundation design for pavement projects.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">�</div>
-                    <h3>Non-Destructive Testing</h3>
-                    <p>Falling Weight Deflectometer (FWD), roughness surveys, retro-reflectivity testing, and structural condition assessments.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📋</div>
-                    <h3>Quality Assurance & Third-Party Inspection</h3>
-                    <p>Material testing, construction quality control, compliance verification, and independent third-party inspections.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏭</div>
-                    <h3>Pavement Rehabilitation</h3>
-                    <p>Structural overlays, mill and fill operations, full-depth reconstruction, and pavement preservation strategies.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📐</div>
-                    <h3>Project Management & DPR</h3>
-                    <p>Detailed Project Reports (DPR), feasibility studies, project lifecycle management, and construction supervision.</p>
-                </div>
-            </div>
+    <section id="services" style="margin-top:18px">
+      <h2>Services</h2>
+      <div class="grid cards" style="margin-top:12px">
+        <div class="card">
+          <h3>Pavement Testing</h3>
+          <p class="muted">Falling weight deflectometer (FWD), Ground Penetrating Radar, friction testing, coring and laboratory testing.</p>
         </div>
+        <div class="card">
+          <h3>Pavement Consultancy</h3>
+          <p class="muted">Condition surveys, dilapidation studies, life‑cycle cost assessments and rehabilitation recommendations.</p>
+        </div>
+        <div class="card">
+          <h3>Asset Management</h3>
+          <p class="muted">Road asset data management systems, prioritisation and long‑term planning tools.</p>
+        </div>
+        <div class="card">
+          <h3>Training & Education</h3>
+          <p class="muted">Workshops and customised training on pavement evaluation and pavement management systems.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About Pavements Management Systems</h2>
-                    <p>Pavements Management Systems is a premier ISO 9001:2015 certified multi-disciplinary engineering consulting company specializing in pavement engineering and infrastructure development. Established with a vision to provide world-class pavement solutions, we have become a trusted name in the industry.</p>
-                    <p>Our expertise spans across highways, airports, urban roads, and industrial pavements. We utilize state-of-the-art equipment including Network Survey Vehicles (NSV), Falling Weight Deflectometer (FWD), Ground Penetrating Radar (GPR), and advanced laboratory testing facilities.</p>
-                    <p>With our NABL accredited laboratory and experienced team of engineers, we deliver comprehensive solutions from conceptual design to project completion, ensuring quality, safety, and sustainability in every project.</p>
-                    <div class="stats">
-                        <div class="stat">
-                            <h3>500+</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat">
-                            <h3>25+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat">
-                            <h3>15000+</h3>
-                            <p>KM Roads Tested</p>
-                        </div>
-                        <div class="stat">
-                            <h3>25</h3>
-                            <p>States Served</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="placeholder-image">
-                        <p>Engineering Team with Testing Equipment</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="equipment" style="margin-top:28px">
+      <h2>Equipment</h2>
+      <p class="muted">We operate a fleet of specialist testing equipment. Replace the list below with your actual inventory and links to equipment pages or PDF datasheets.</p>
+      <div class="equipment-list" style="margin-top:12px">
+        <div class="equip">Falling Weight Deflectometer (FWD)</div>
+        <div class="equip">Ground Penetrating Radar (GPR)</div>
+        <div class="equip">Automated Crack Detection (LCMS)</div>
+        <div class="equip">Dynamic Cone Penetrometer</div>
+      </div>
     </section>
 
-    <!-- Laboratory Section -->
-    <section id="laboratory" class="laboratory">
-        <div class="container">
-            <div class="section-header">
-                <h2>Laboratory Engineering</h2>
-                <p>NABL Accredited Laboratory (ISO/IEC 17025:2017) for Material Testing & Quality Assurance</p>
-            </div>
-            <div class="laboratory-content">
-                <div class="lab-text">
-                    <h3>Advanced Material Testing Facility</h3>
-                    <p>Our NABL accredited laboratory provides comprehensive testing services for pavement materials, soils, and construction materials. We ensure quality compliance and performance verification for all project requirements.</p>
-                    <div class="lab-services">
-                        <div class="lab-service">
-                            <h4>Soil Investigation</h4>
-                            <p>Grain size analysis, Atterberg limits, compaction tests, CBR testing, and soil classification</p>
-                        </div>
-                        <div class="lab-service">
-                            <h4>Asphalt Testing</h4>
-                            <p>Marshall stability, density tests, aggregate gradation, bitumen testing, and mix design</p>
-                        </div>
-                        <div class="lab-service">
-                            <h4>Concrete Testing</h4>
-                            <p>Compressive strength, flexural strength, aggregate testing, and concrete mix design</p>
-                        </div>
-                        <div class="lab-service">
-                            <h4>Quality Assurance</h4>
-                            <p>Third-party inspection, material certification, and construction quality control</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lab-image">
-                    <div class="placeholder-image">
-                        <p>NABL Accredited Laboratory Testing Equipment</p>
-                    </div>
-                </div>
-            </div>
+    <section id="team" style="margin-top:28px">
+      <h2>Meet the team</h2>
+      <div class="team" style="margin-top:12px">
+        <div class="member">
+          <strong>Director — John Example</strong>
+          <div class="muted">Managing Director</div>
         </div>
+        <div class="member">
+          <strong>Operations — Mary Example</strong>
+          <div class="muted">Operations Manager</div>
+        </div>
+        <div class="member">
+          <strong>Consultant — Paul Example</strong>
+          <div class="muted">Senior Consultant</div>
+        </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>Engineering excellence across highways, airports, and infrastructure projects</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="placeholder-image">
-                        <p>Highway Pavement Design - 85km National Highway</p>
-                    </div>
-                    <div class="project-info">
-                        <h3>National Highway Pavement Design</h3>
-                        <p>Complete pavement design and construction supervision for 85km NH project using mechanistic-empirical design methods</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="placeholder-image">
-                        <p>Airport Runway Testing - International Airport</p>
-                    </div>
-                    <div class="project-info">
-                        <h3>Airport Runway Rehabilitation</h3>
-                        <p>Structural assessment and rehabilitation design for international airport runway using FWD and GPR technology</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="placeholder-image">
-                        <p>Urban Road Network Survey - 150km City Roads</p>
-                    </div>
-                    <div class="project-info">
-                        <h3>Urban Road Network Assessment</h3>
-                        <p>Comprehensive pavement condition survey and rehabilitation strategy for 150km urban road network</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="placeholder-image">
-                        <p>Industrial Pavement - Heavy Load Facility</p>
-                    </div>
-                    <div class="project-info">
-                        <h3>Industrial Heavy-Duty Pavement</h3>
-                        <p>Design and construction of reinforced concrete pavement for heavy industrial loading dock facility</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="placeholder-image">
-                        <p>Traffic Survey - Highway Corridor Study</p>
-                    </div>
-                    <div class="project-info">
-                        <h3>Highway Corridor Traffic Study</h3>
-                        <p>Comprehensive traffic analysis including ATCC, axle load surveys, and capacity enhancement recommendations</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="placeholder-image">
-                        <p>Pavement Preservation - State Highway Network</p>
-                    </div>
-                    <div class="project-info">
-                        <h3>State Highway Preservation Program</h3>
-                        <p>Asset management and pavement preservation strategy implementation across 300km state highway network</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="contact" style="margin-top:28px" class="card">
+      <h2>Contact</h2>
+      <p class="muted">Office addresses, phone numbers and an email contact. Replace with your real contact details before publishing.</p>
+      <ul class="muted">
+        <li>NSW — Level 2, Example Street, Sydney</li>
+        <li>QLD — Example Road, Sunshine Coast</li>
+        <li>Email: hello@example.com</li>
+      </ul>
     </section>
+  </main>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
-        <div class="container">
-            <div class="section-header">
-                <h2>Certifications & Accreditations</h2>
-                <p>Our commitment to quality and excellence validated by international standards</p>
-            </div>
-            <div class="certifications-grid">
-                <div class="cert-card">
-                    <div class="cert-icon">🏆</div>
-                    <h3>ISO 9001:2015</h3>
-                    <p>Quality Management System Certification for consistent service delivery and continuous improvement</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🔬</div>
-                    <h3>NABL Accreditation</h3>
-                    <p>National Accreditation Board for Testing and Calibration Laboratories (ISO/IEC 17025:2017)</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🏗️</div>
-                    <h3>IRC Compliance</h3>
-                    <p>Indian Roads Congress specifications compliance for highway and pavement engineering</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">✈️</div>
-                    <h3>ICAO Standards</h3>
-                    <p>International Civil Aviation Organization standards for airport pavement design and testing</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">📜</div>
-                    <h3>MSME Registration</h3>
-                    <p>Ministry of Micro, Small and Medium Enterprises registration for government projects</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🛡️</div>
-                    <h3>Professional Indemnity</h3>
-                    <p>Comprehensive professional indemnity insurance for all engineering consultancy services</p>
-                </div>
-            </div>
-            <div class="clients-section">
-                <h3>Our Valued Clients</h3>
-                <div class="clients-grid">
-                    <div class="client-placeholder">National Highways Authority</div>
-                    <div class="client-placeholder">State Highway Departments</div>
-                    <div class="client-placeholder">Airport Authority</div>
-                    <div class="client-placeholder">Municipal Corporations</div>
-                    <div class="client-placeholder">Private Developers</div>
-                    <div class="client-placeholder">Industrial Companies</div>
-                </div>
-            </div>
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div>
+          <strong>YourPavementCo</strong>
+          <div class="muted">Specialist pavement testing & consultancy</div>
         </div>
-    </section>
+        <div class="muted">© <span id="year"></span> YourPavementCo — Built from a template. Replace content & images to make it yours.</div>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2>Contact Our Engineering Team</h2>
-                    <p>Ready to discuss your pavement engineering requirements? Contact our expert team for professional consultation and technical solutions.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <strong>Phone:</strong> +1 (555) 123-PAVE (7283)
-                        </div>
-                        <div class="contact-item">
-                            <strong>Email:</strong> engineering@propaveengineers.com
-                        </div>
-                        <div class="contact-item">
-                            <strong>Laboratory:</strong> lab@propaveengineers.com
-                        </div>
-                        <div class="contact-item">
-                            <strong>Address:</strong> 456 Engineering Plaza, Tech District, Innovation City, IC 12345
-                        </div>
-                        <div class="contact-item">
-                            <strong>Office Hours:</strong> Mon-Fri 8AM-6PM, Sat 9AM-2PM
-                        </div>
-                        <div class="contact-item">
-                            <strong>Emergency:</strong> 24/7 Support for Critical Projects
-                        </div>
-                    </div>
-                </div>
-                
-
-                    <div class="contact-form">
-                    <form method="POST" id="form">
-                        <input type="hidden" name="access_key" value="75b898e0-6415-45f9-a25f-631c2e1036ab">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
-                        </div>
-                        <div class="form-group">
-                            <select id="service" name="service" required>
-                                <option value="">Select Service Category</option>
-                                <option value="pavement-design">Pavement Design & Engineering</option>
-                                <option value="investigation">Pavement Investigation Studies</option>
-                                <option value="traffic-surveys">Traffic Surveys & Analysis</option>
-                                <option value="geotechnical">Geotechnical Investigation</option>
-                                <option value="ndt">Non-Destructive Testing</option>
-                                <option value="laboratory">Laboratory Testing Services</option>
-                                <option value="rehabilitation">Pavement Rehabilitation</option>
-                                <option value="quality-assurance">Quality Assurance & Inspection</option>
-                                <option value="consulting">General Engineering Consulting</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Describe your project requirements, location, timeline, and specific technical needs..." rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Pavements Management Systems</h3>
-                    <p>ISO 9001:2015 certified engineering consultancy. Your trusted partner for advanced pavement engineering solutions and NABL accredited laboratory services.</p>
-                    <div class="certifications-footer">
-                        <span class="cert-badge">ISO 9001:2015</span>
-                        <span class="cert-badge">NABL Accredited</span>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Core Services</h3>
-                    <ul>
-                        <li><a href="#services">Pavement Design & Engineering</a></li>
-                        <li><a href="#services">Investigation Studies</a></li>
-                        <li><a href="#services">Traffic Surveys</a></li>
-                        <li><a href="#services">Laboratory Testing</a></li>
-                        <li><a href="#services">Quality Assurance</a></li>
-                        <li><a href="#services">Project Management</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Information</h3>
-                    <p>Phone: +1 (555) 123-PAVE</p>
-                    <p>Email: engineering@propaveengineers.com</p>
-                    <p>Lab: lab@propaveengineers.com</p>
-                    <p>456 Engineering Plaza<br>Innovation City, IC 12345</p>
-                    <div class="social-links">
-                        <a href="#">LinkedIn</a>
-                        <a href="#">ResearchGate</a>
-                        <a href="#">Technical Papers</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Pavements Management Systems & Consultants. All rights reserved. | ISO 9001:2015 Certified | NABL Accredited Laboratory</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-    <script src="js/form.js"></script>
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+    function submitForm(e){
+      e.preventDefault();
+      const f = e.target;
+      alert('Form submitted (demo). Replace this with a real form endpoint or GitHub Actions to handle submissions.');
+      f.reset();
+    }
+  </script>
 </body>
 </html>
